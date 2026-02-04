@@ -18,7 +18,7 @@ public class Main {
 
 
         // Data types in java!
-        byte b = 100; // 8 bits -> -128 to 128
+        byte b = 180; // 8 bits -> -128 to 128
         System.out.println("b is " + b);
 
     }
