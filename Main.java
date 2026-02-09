@@ -58,22 +58,50 @@ public class Main {
     //     // a = "hello world!";
     //     // a = 25.2;
 
-    char a = 'H';
-    char b = 'e';
-    char c = 'l';
-    char d = 'l';
-    char f = 'o';
-    char g = '!';
-    String hello = "Hello!";
-    System.out.println(hello);
+    // char a = 'H';
+    // char b = 'e';
+    // char c = 'l';
+    // char d = 'l';
+    // char f = 'o';
+    // char g = '!';
+    // char symbol = '#';
+    // char myChar = 'A';
+    // System.out.println((int)myChar);
+    // String hello = "Hello!";
+    // System.out.println(hello);
 
-    // nums = [1,2,3]
-    int[] nums = {1,2,3};
-    System.out.println(nums[0]);
+    // // nums = [1,2,3]
+    // int x = 7;
+    // int[] nums = {1,2,3};
+    // System.out.println(nums);
 
-    double db = 3.2;
-    int x = db;
+    // double db = 3.2;
+    // double pi = 3.14159;
 
+    // System.out.println(0.1 + 0.2);
+
+    // boolean isDone = false;
+    // int score = 25;
+    // boolean passed = score >= 60;
+    // System.out.println(passed);
+    // //System.out.println(11%2);
+    // String stringGuy = "Pikachu!!";
+    // System.out.println(stringGuy);
+
+        int x = 7;
+        double y = x; 
+
+        System.out.println(x);
+        System.out.println(y);
+
+        double d = 9.8;
+        int n = (int)d;
+
+        System.out.println(n);
+
+        int max = Integer.MAX_VALUE;
+        System.out.println(max+1);     
+   
 
     }
 }
