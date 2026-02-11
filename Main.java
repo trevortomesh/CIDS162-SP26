@@ -1,6 +1,34 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
 
+        double radius; // Declare radius
+        double area;    // Declare area
+
+        Scanner input = new Scanner(System.in);
+
+        // Step 1: Read in radius
+        System.out.print("Enter a number for radius: ");
+        radius = input.nextDouble();
+
+        // Step 2: Compute Area
+
+        area = radius * radius * 3.14159;
+
+        // Step 3: Display Area
+
+        System.out.println("The area for the circle of radius " + radius + " is " + area);
+
+        // System.out.print("This is print");
+        // System.out.print("This is also print!");
+        // System.out.println("This is println!");
+        // System.out.print("Hi, print again!");
+    
+
+    /******************* OLD STUFF ******************/
+
+     /*    
         // Display message Hello World! on the console
         // System.out.println("Hello World!");
         // System.out.println("Hello again!");
@@ -88,20 +116,29 @@ public class Main {
     // String stringGuy = "Pikachu!!";
     // System.out.println(stringGuy);
 
-        int x = 7;
-        double y = x; 
+        // int x = 7;
+        // double y = x; 
 
-        System.out.println(x);
-        System.out.println(y);
+        // System.out.println(x);
+        // System.out.println(y);
 
-        double d = 9.8;
-        int n = (int)d;
+        // double d = 9.8;
+        // int n = (int)d;
 
-        System.out.println(n);
+        // System.out.println(n);
 
-        int max = Integer.MAX_VALUE;
-        System.out.println(max+1);     
+        // int max = Integer.MAX_VALUE;
+        // System.out.println(max+1);     
    
+        // int x = 5;
+        // double y;
+        // y = x;
+        // System.out.println(y);
+        // x = (int) 3.9;
+        // System.out.println(x);
+
+    
+
 
     }
 }
