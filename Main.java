@@ -3,23 +3,41 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        double radius; // Declare radius
-        double area;    // Declare area
 
         Scanner input = new Scanner(System.in);
 
-        // Step 1: Read in radius
-        System.out.print("Enter a number for radius: ");
-        radius = input.nextDouble();
+        System.out.print("How many pies do you want? ");
+        int pies = input.nextInt();
+        input.close();
+        System.out.println("Okay, oinky... here's " + pies + " pies!");
+        int add = 2+2;
+        int sub = 2-2;
+        int mult = 2*2;
+        System.out.println(2/3);
+    //     double radius; // Declare radius
+    //     double area;    // Declare area
+    //     final double PI = 3.14159; 
+    //     final int MAXVALUE = 100000;
+    //     int numberOfPies = 42;
+    //     double SnakeCase;
+    //     final String GOOP_PIE; 
+  
+    //    // int x;
 
-        // Step 2: Compute Area
+    //     Scanner input = new Scanner(System.in);
 
-        area = radius * radius * 3.14159;
+    //     // Step 1: Read in radius
+    //     System.out.print("Enter a number for radius: ");
+    //     radius = input.nextDouble();
+    //     input.close();
+    //     // Step 2: Compute Area
+  
+    //     area = radius * radius * PI;
 
-        // Step 3: Display Area
+    //     // Step 3: Display Area
 
-        System.out.println("The area for the circle of radius " + radius + " is " + area);
-
+    //     System.out.println("The area for the circle of radius " + radius + " is " + area);
+        
         // System.out.print("This is print");
         // System.out.print("This is also print!");
         // System.out.println("This is println!");
