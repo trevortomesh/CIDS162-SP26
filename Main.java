@@ -4,25 +4,45 @@ public class Main {
     public static void main(String[] args){
 
 
-        Scanner input = new Scanner(System.in);
+        final int numberOfYears = 34;
+        final long longy = 34L;
+        double weight = 0.305;
+        //byte b = longy;
+        //System.out.println(0B1111);
+        System.out.println(0XFFFF);
 
-        System.out.print("How many pies do you want? ");
-        int pies = input.nextInt();
-        input.close();
-        System.out.println("Okay, oinky... here's " + pies + " pies!");
-        int add = 2+2;
-        int sub = 2-2;
-        int mult = 2*2;
-        System.out.println(2/3);
+        // Scanner input = new Scanner(System.in);
+
+        // // 1) Prompt the user for input.
+        // // time in seconds as an integer
+        // System.out.print("Enter an integer for seconds: ");
+        // int seconds = input.nextInt();
+
+        // // 2) Convert to minutes + seconds
+        // int minutes = seconds / 60;
+        // int remainingSeconds = seconds % 60;
+
+        // // 3) Display time in minutes + seconds
+        
+        // System.out.println(" and " + remainingSeconds + " seconds");
+
+        // System.out.print("How many pies do you want? ");
+        // int pies = input.nextInt();
+        // input.close();
+        // System.out.println("Okay, oinky... here's " + pies + " pies!");
+        // int add = 2+2;
+        // int sub = 2-2;
+        // int mult = 2*2;
+        // System.out.println(2/3);
     //     double radius; // Declare radius
     //     double area;    // Declare area
     //     final double PI = 3.14159; 
-    //     final int MAXVALUE = 100000;
-    //     int numberOfPies = 42;
-    //     double SnakeCase;
-    //     final String GOOP_PIE; 
+    // //     final int MAXVALUE = 100000;
+    // //     int numberOfPies = 42;
+    // //     double SnakeCase;
+    // //     final String GOOP_PIE; 
   
-    //    // int x;
+    // //    // int x;
 
     //     Scanner input = new Scanner(System.in);
 
@@ -32,7 +52,7 @@ public class Main {
     //     input.close();
     //     // Step 2: Compute Area
   
-    //     area = radius * radius * PI;
+    //     area = PI * Math.pow(radius, 2);
 
     //     // Step 3: Display Area
 
