@@ -4,12 +4,44 @@ public class Main {
     public static void main(String[] args){
 
 
-        final int numberOfYears = 34;
-        final long longy = 34L;
-        double weight = 0.305;
+        boolean niceOut = false;
+
+        if(niceOut == true){
+            System.out.println("Go outside!");
+        }
+
+        if(niceOut == false){
+            System.out.println("Stay inside!");
+        }
+
+        // int i = 3;
+        // int j = 3;
+
+        // ++i;
+        // --j;
+
+        // int i = 10;
+        // int newNum = 10 * --i;
+
+        // System.out.println("i is now: " + i + ", newNum is " + newNum);
+
+        // Scanner input = new Scanner(System.in);
+
+        // System.out.print("Enter a degree in Fahrenheit: ");
+        // double fahrenheit = input.nextDouble();
+        // double celsius = (5.0/9) * (fahrenheit - 32);
+        // System.out.println("Fahrenheit " + fahrenheit + " is " + 
+        //     celsius + " in Celsius.");
+
+
+        //System.out.println(3+4*4+5*(4+3)-1);
+
+        // final int numberOfYears = 34;
+        // final long longy = 34L;
+        // double weight = 0.305;
         //byte b = longy;
         //System.out.println(0B1111);
-        System.out.println(0XFFFF);
+        // System.out.println(0XFFFF);
 
         // Scanner input = new Scanner(System.in);
 
