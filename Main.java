@@ -3,16 +3,59 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
+        Scanner input = new Scanner(System.in);
 
-        boolean niceOut = false;
+        System.out.print("How old are you?: ");
+        int age = input.nextInt();
 
-        if(niceOut == true){
-            System.out.println("Go outside!");
+        if( age >= 18 ){
+            System.out.println("You're an adult!");
+
+            if(age >= 21){
+                System.out.println("You can drink!");
+                if(age >= 25){
+                    System.out.println("You can rent a car!!!");
+                    if(age >= 65){
+                        System.out.println("Gonna die soon.... cheap pancakes!!");
+                    }
+                }
+            }
+
+        }else{
+            System.out.println("You are a baby child!");
         }
+        
+        // // 1) input 
 
-        if(niceOut == false){
-            System.out.println("Stay inside!");
-        }
+        //     System.out.print("Enter an integer: ");
+        //     int number = input.nextInt();
+
+        // // 2) computation
+
+        //     if(number % 5 == 0){
+        //         System.out.println("Hi 5!!");
+        //     }
+        //     else{
+        //         System.out.println("No 5 for you!!!");
+        //     }
+            
+        //     System.out.println("Thanks for playing!");
+            // if(number % 2 == 0){
+            //     System.out.println("Hi 2!!");
+            // }
+
+
+       
+
+        // boolean niceOut = false;
+
+        // if(niceOut == true){
+        //     System.out.println("Go outside!");
+        // }
+
+        // if(niceOut == false){
+        //     System.out.println("Stay inside!");
+        // }
 
         // int i = 3;
         // int j = 3;
@@ -206,9 +249,6 @@ public class Main {
         // System.out.println(y);
         // x = (int) 3.9;
         // System.out.println(x);
-
-    
-
 
     }
 }
