@@ -5,25 +5,82 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("How old are you?: ");
-        int age = input.nextInt();
+        //1. Generate two random single-digit integers
 
-        if( age >= 18 ){
-            System.out.println("You're an adult!");
+        int number1 = (int) (Math.random() * 10);
+        //System.out.println(number1);
+        int number2 = (int) (Math.random() *10 );
+       //System.out.println(number2);
 
-            if(age >= 21){
-                System.out.println("You can drink!");
-                if(age >= 25){
-                    System.out.println("You can rent a car!!!");
-                    if(age >= 65){
-                        System.out.println("Gonna die soon.... cheap pancakes!!");
-                    }
-                }
-            }
-
-        }else{
-            System.out.println("You are a baby child!");
+        //2. if number1 < number2, swap number1 with number2
+        if(number1 < number2){
+            int temp = number1;
+            number1 = number2;
+            number2 = temp;
+            // System.out.println("number1 is now: " + number1);
+            // System.out.println("number2 is now: " + number2);
         }
+
+        //3. Prompt the student to answer "What is number1 - number2"
+        System.out.print("What is " + number1 + " - " + number2 + "? ");
+        int answer = input.nextInt();
+
+        //4. Grade the answer and display result
+
+        if(number1 - number2 == answer){
+            System.out.println("You are correct! Way to go!");
+        }else{
+            System.out.println("Go back to kindergardten... eat some more crayons...");
+            System.out.println(number1 + " - " + number2 +
+                " should be " + (number1 - number2));
+        } 
+
+       // System.out.print("Give me a score: ");
+
+
+        // int score = input.nextInt();
+
+        // if(score >= 90){
+        //     System.out.println("A");
+        // }
+
+        // else if(score >= 80){
+        //     System.out.println("B");
+        // }
+
+        // else if(score >= 70){
+        //     System.out.println("C");
+        // }
+
+        // else if(score >= 60){
+        //     System.out.println("D");
+        // }
+
+        // else{
+        //     System.out.println("F");
+        // }
+
+        // System.out.print("How old are you?: ");
+        // int age = input.nextInt();
+
+        // if( age >= 18 ){
+        //     System.out.println("You're an adult!");
+
+        //     if(age >= 21){
+        //         System.out.println("You can drink!");
+        //     }
+        //     else{System.out.println("No beer for you!!");    
+        //         if(age >= 25){
+        //             System.out.println("You can rent a car!!!");
+        //             if(age >= 65){
+        //                 System.out.println("Gonna die soon.... cheap pancakes!!");
+        //             }
+        //         }
+        //     }
+
+        // }else{
+        //     System.out.println("You are a baby child!");
+        // }
         
         // // 1) input 
 
