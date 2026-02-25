@@ -3,37 +3,61 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        Scanner input = new Scanner(System.in);
 
-        //1. Generate two random single-digit integers
+        boolean con1 = false;
+        boolean con2 = false;
 
-        int number1 = (int) (Math.random() * 10);
-        //System.out.println(number1);
-        int number2 = (int) (Math.random() *10 );
-       //System.out.println(number2);
+        if(con1 ^ con2){
+            System.out.println("Pass!");
+        }else{System.out.println("Fail!");}
 
-        //2. if number1 < number2, swap number1 with number2
-        if(number1 < number2){
-            int temp = number1;
-            number1 = number2;
-            number2 = temp;
-            // System.out.println("number1 is now: " + number1);
-            // System.out.println("number2 is now: " + number2);
-        }
+        // boolean raining = false;
+        // boolean cold = false;
+        // boolean warm = true;
+        // boolean sunny = false;
 
-        //3. Prompt the student to answer "What is number1 - number2"
-        System.out.print("What is " + number1 + " - " + number2 + "? ");
-        int answer = input.nextInt();
+        // if(!raining && !cold){
+        //     System.out.println("Go outside!");
+        // }else{System.out.println("Stay inside!");}
+        // if(sunny && warm){
+        //     System.out.println("Let's go outside!");
+        // }else{System.out.println("It's uck out! Let's stay indoors!");}
+        // if(sunny){
+        //     if(warm){
+        //         System.out.println("It's nice out! Let's go outside!");
+        //     }else{System.out.println("It's too cold!");}
+        // }else{System.out.println("It's rainy out :-(");}
+    //     Scanner input = new Scanner(System.in);
 
-        //4. Grade the answer and display result
+    //     //1. Generate two random single-digit integers
 
-        if(number1 - number2 == answer){
-            System.out.println("You are correct! Way to go!");
-        }else{
-            System.out.println("Go back to kindergardten... eat some more crayons...");
-            System.out.println(number1 + " - " + number2 +
-                " should be " + (number1 - number2));
-        } 
+    //     int number1 = (int) (Math.random() * 10);
+    //     //System.out.println(number1);
+    //     int number2 = (int) (Math.random() *10 );
+    //    //System.out.println(number2);
+
+    //     //2. if number1 < number2, swap number1 with number2
+    //     if(number1 < number2){
+    //         int temp = number1;
+    //         number1 = number2;
+    //         number2 = temp;
+    //         // System.out.println("number1 is now: " + number1);
+    //         // System.out.println("number2 is now: " + number2);
+    //     }
+
+    //     //3. Prompt the student to answer "What is number1 - number2"
+    //     System.out.print("What is " + number1 + " - " + number2 + "? ");
+    //     int answer = input.nextInt();
+
+    //     //4. Grade the answer and display result
+
+    //     if(number1 - number2 == answer){
+    //         System.out.println("You are correct! Way to go!");
+    //     }else{
+    //         System.out.println("Go back to kindergardten... eat some more crayons...");
+    //         System.out.println(number1 + " - " + number2 +
+    //             " should be " + (number1 - number2));
+    //     } 
 
        // System.out.print("Give me a score: ");
 
