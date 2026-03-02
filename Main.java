@@ -5,13 +5,30 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
 
-        int sum = 0; 
-        int i = 1;
-        while(i < 10){
-            sum = sum + i;
-            i++;
+        int number = (int)(Math.random() * 101);
+
+        System.out.println("Guess a magic number between 0 and 100");
+        int guess = -1;
+        while(guess != number){
+            System.out.print("\nEnter your guess: ");
+            guess = input.nextInt();
+        
+            if(number == guess){
+                System.out.println("You win... or something");
+                //break;
+            }else if(number < guess){
+                System.out.println("Too high, bro...");
+            }else{System.out.println("Too low... :-(");}
         }
-        System.out.println("sum is " + sum);
+
+        input.close();
+        // int sum = 0; 
+        // int i = 1;
+        // while(i < 10){
+        //     sum = sum + i;
+        //     i++;
+        // }
+        // System.out.println("sum is " + sum);
         // int count = 1;
         // while(count <= 100){
         //     System.out.println("This is the " + count + " time I've printed this!");
