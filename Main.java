@@ -4,11 +4,49 @@ public class Main {
     public static void main(String[] args){
     //   Scanner input = new Scanner(System.in);
 
-    for(int min = 0; min < 60; min++){
-        for(int sec = 0; sec < 60; sec++){
-            System.out.println(min + " minutes and " + sec + " seconds");
+    System.out.println();
+    System.out.println("                Multiplication Table    ");
+    System.out.print("   ");
+
+    for(int j = 1; j <=9; j++){
+        System.out.print("   " + j);
+    }
+    System.out.println("\n------------------------------------------------");
+
+    for(int i = 1; i <=9; i++){
+        System.out.print(i + " | ");
+        for(int j = 1; j <=9; j++){
+            System.out.printf("%4d", i*j);
         }
-    }   
+        System.out.println();
+    }
+
+    // for(int year = 2026; year < 2028; year++ ){
+    //     for(int month = 1; month <= 12; month++){
+    //         String printMonth = " ";
+    //         switch(month){
+    //             case 1: printMonth = "January"; break;
+    //             case 2: printMonth = "February"; break;
+    //             case 3: printMonth = "March"; break;
+    //             case 4: printMonth = "April"; break;
+    //             case 5: printMonth = "May"; break;
+    //             case 6: printMonth = "June"; break;
+    //             case 7: printMonth = "July"; break;
+    //             case 8: printMonth = "August"; break;
+    //             case 9: printMonth = "September"; break;
+    //             case 10: printMonth = "October"; break;
+    //             case 11: printMonth = "November"; break;
+    //             case 12: printMonth = "December"; break;
+    //         }
+    //         System.out.println("year: " + year + " month: " + printMonth);
+
+    //     }
+    // }
+    // for(int min = 0; min < 60; min++){
+    //     for(int sec = 0; sec < 60; sec++){
+    //         System.out.println(min + " minutes and " + sec + " seconds");
+    //     }
+    // }   
 
     // int i = 0;
     // while(i < 100){
