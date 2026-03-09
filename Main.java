@@ -2,24 +2,89 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
+
+        System.out.println("Sum from 1 to 10 is " + sum(1,10));
+        System.out.println("Sum from 20 to 37 is " + sum(20,37));
+        System.out.println("Sum from 35 to 49 is " + sum(35,49));
+
+
+
+        // suppose you need to find the sum of integers from 1 to 10, 20 to 37, and 35 to 49
+
+        // int sum = 0;
+        
+        // for(int i = 1; i <=10; i++){
+        //     sum += i;
+        // }
+        // System.out.println("Sum from 1 to 10 is " + sum);
+
+
+
+        // sum = 0;
+        
+        // for(int i = 20; i <=37; i++){
+        //     sum += i;
+        // }
+        // System.out.println("Sum from 20 to 37 is " + sum);
+
+
+        // sum = 0;
+        // for(int i = 35; i <=49; i++){
+        //     sum += i;
+        // }
+        // System.out.println("Sum from 35 to 49 is " + sum);
+        // int sum = 0;
+        // int number = 0;
+
+        // while(number < 20){
+        //     number++;
+        //     if(number == 10 || number == 11){
+        //         continue;
+        //     }
+        //     sum += number;
+        //     // if(sum >= 100){
+        //     //     break;
+        //     // }
+
+        //     System.out.println("The number is " + number);
+        //     System.out.println("The sum is " + sum);
+        // }
+
     //   Scanner input = new Scanner(System.in);
 
-    System.out.println();
-    System.out.println("                Multiplication Table    ");
-    System.out.print("   ");
+        // for(int i = 0; i < 100; i++){
+        //     System.out.println(i + " * 5 = " + i*5);
+        //     if(i*5 > 200){
+        //         break;
+        //     }
+        // }
 
-    for(int j = 1; j <=9; j++){
-        System.out.print("   " + j);
-    }
-    System.out.println("\n------------------------------------------------");
+    // int i = 0;
+    //     while(true){
+    //         System.out.println("Hi!");
+    //         i++;
+    //         if(i == 30){
+    //             break;
+    //         }
+    //     }
 
-    for(int i = 1; i <=9; i++){
-        System.out.print(i + " | ");
-        for(int j = 1; j <=9; j++){
-            System.out.printf("%4d", i*j);
-        }
-        System.out.println();
-    }
+
+    // System.out.println();
+    // System.out.println("                Multiplication Table    ");
+    // System.out.print("   ");
+
+    // for(int j = 1; j <=9; j++){
+    //     System.out.print("   " + j);
+    // }
+    // System.out.println("\n------------------------------------------------");
+
+    // for(int i = 1; i <=9; i++){
+    //     System.out.print(i + " | ");
+    //     for(int j = 1; j <=9; j++){
+    //         System.out.printf("%4d", i*j);
+    //     }
+    //     System.out.println();
+    // }
 
     // for(int year = 2026; year < 2028; year++ ){
     //     for(int month = 1; month <= 12; month++){
@@ -141,4 +206,14 @@ public class Main {
         // }
 
     }
+
+    static int sum(int i1, int i2){
+        int result = 0;
+        for(int i = i1; i < i2; i++){
+            result += i;
+        }
+        return result;
+    }
+
+
 }
