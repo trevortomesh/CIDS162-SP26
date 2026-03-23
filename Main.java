@@ -1,11 +1,22 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
 
-        System.out.println("Sum from 1 to 10 is " + sum(1,10));
-        System.out.println("Sum from 20 to 37 is " + sum(20,37));
-        System.out.println("Sum from 35 to 49 is " + sum(35,49));
+
+       // int myNum = getRandInt();
+        for(int i = 0; i < 10; i++){
+            System.out.println(getRandInt());
+        }
+
+        int mySum = sum(1,10);
+         System.out.println("Sum from 1 to 10 is " + sum(1,10));
+        // System.out.println("Sum from 20 to 37 is " + sum(20,37));
+        // System.out.println("Sum from 35 to 49 is " + sum(35,49));
+
+        printCountDown(10);
+        //sum(1,10);
 
 
 
@@ -207,6 +218,7 @@ public class Main {
 
     }
 
+
     static int sum(int i1, int i2){
         int result = 0;
         for(int i = i1; i < i2; i++){
@@ -215,5 +227,16 @@ public class Main {
         return result;
     }
 
+    static void printCountDown(int start){
+        for(int t = start; t >= 0; t--){
+            System.out.println("T minus " + t);
+        }
+    }
+
+    static int getRandInt(){
+        int rand = (int) (Math.random() * 100);
+        return rand;
+    }
 
 }
+
