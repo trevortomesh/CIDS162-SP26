@@ -5,17 +5,27 @@ public class Main {
     public static void main(String[] args){
 
 
-       // int myNum = getRandInt();
-        for(int i = 0; i < 10; i++){
-            System.out.println(getRandInt());
-        }
+        String name = "Steve";
+        int age = 25;
 
-        int mySum = sum(1,10);
-         System.out.println("Sum from 1 to 10 is " + sum(1,10));
+
+        printNameAge(name, age);
+        System.out.println(name);
+        System.out.println(age);
+
+
+    //     System.out.println("Hello, world!");
+    //    // int myNum = getRandInt();
+    //     for(int i = 0; i < 10; i++){
+    //         System.out.println(getRandInt());
+    //     }
+
+    //     int mySum = sum(1,10);
+    //      System.out.println("Sum from 1 to 10 is " + sum(1,10));
         // System.out.println("Sum from 20 to 37 is " + sum(20,37));
         // System.out.println("Sum from 35 to 49 is " + sum(35,49));
 
-        printCountDown(10);
+        //printCountDown(10);
         //sum(1,10);
 
 
@@ -225,6 +235,13 @@ public class Main {
             result += i;
         }
         return result;
+    }
+
+    static void printNameAge(String name, int age){
+        System.out.println("Your name is " + name);
+        System.out.println("Your age is " + age);
+        name = "Trevor";
+        age = 37;
     }
 
     static void printCountDown(int start){
