@@ -5,13 +5,24 @@ public class Main {
     public static void main(String[] args){
 
 
-        String name = "Steve";
-        int age = 25;
+        double a = 123.23;
+        double b = 456.86;
+        int c = 124;
+
+        System.out.println("Max is " + max(4,7));
 
 
-        printNameAge(name, age);
-        System.out.println(name);
-        System.out.println(age);
+        // int num = 1232341;
+        // System.out.println(isPrime(num));
+        // printPrimeNumbers(50);
+
+        // String name = "Steve";
+        // int age = 25;
+
+
+        // printNameAge(name, age);
+        // System.out.println(name);
+        // System.out.println(age);
 
 
     //     System.out.println("Hello, world!");
@@ -229,6 +240,35 @@ public class Main {
     }
 
 
+    static int max(int num1, int num2){
+        if(num1 > num2){
+            return num1;
+        }else{return num2;}
+    }
+
+    static double max(int num1, double num2){
+        if(num1 > num2){return num1;}
+        else{return num2;}
+    }
+
+    static double max(double num1, int num2){
+        if(num1 > num2){return num1;}
+        else{return num2;}
+    }
+
+    static double max(double num1, double num2){
+        if(num1 > num2){
+            return num1;
+        }else{return num2;}
+    }
+
+    
+    static int max(int num1, int num2, int num3){
+               if(num1 > num2){
+            return num1;
+        }else{return num2;}
+    }
+
     static int sum(int i1, int i2){
         int result = 0;
         for(int i = i1; i < i2; i++){
@@ -236,6 +276,7 @@ public class Main {
         }
         return result;
     }
+
 
     static void printNameAge(String name, int age){
         System.out.println("Your name is " + name);
@@ -253,6 +294,34 @@ public class Main {
     static int getRandInt(){
         int rand = (int) (Math.random() * 100);
         return rand;
+    }
+
+    public static void printPrimeNumbers(int numberOfPrimes){
+        final int NUMBER_OF_PRIMES_PER_LINE = 10; 
+        int count = 0;
+        int number = 2;
+
+        while(count < numberOfPrimes){
+            if(isPrime(number)){
+                count++;
+
+                if(count % NUMBER_OF_PRIMES_PER_LINE == 0){
+                    System.out.printf("%-5d\n", number);
+                }
+                else{System.out.printf("%-5d", number);}
+            }
+            number++;
+        }
+
+    }
+
+    public static boolean isPrime(int number){
+        for(int divisor = 2; divisor <= number /2; divisor++){
+            if(number % divisor ==0){
+                return false;
+            }
+        }
+        return true;
     }
 
 }
