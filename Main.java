@@ -4,34 +4,67 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        int[] highs ={42, 38, 48, 37};
+        int[] numbers = new int[4];
+        //numbers = {3,2,9,0};
+        numbers[0] = 3;
+        numbers[1] = 2;
+        numbers[2] = 9;
+        numbers[3] = 0;
+
+        int[] newNumbers = {1,2,3,4};
+        int[] newerNumbers = newNumbers;
+
+        newNumbers[2] = 10000;
+        System.out.println(newNumbers[2]);
+        System.out.println(newerNumbers[2]);
+        System.out.println("newNumbers address: " + newNumbers);
+        System.out.println("newerNumbers address: " + newerNumbers);
+
+        // System.out.println(newNumbers);
+        // System.out.println(newerNumbers);
+
+
+        // for(int nums : newNumbers){
+        //     System.out.println(nums);
+        // }
+        //System.out.println(numbers[numbers.length-1]);
+        // for(int i = 0; i < numbers.length; i++){
+        //     System.out.println(numbers[i]);
+        // }
+        // System.out.println(numbers);
+        // numbers[0] = 7;
+        // System.out.println(numbers[0]);
+        // System.out.println(numbers);
+
+
+ //       int[] highs ={42, 38, 48, 37};
 
         // for(int i = 0; i < highs.length; i++){
         //     System.out.println(highs[i]);
         // }
 
-        for(int temp : highs){
-            System.out.println(temp);
-        }
+        // for(int temp : highs){
+        //     System.out.println(temp);
+        // }
 
-        String[] pokemon = {"Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wortortle", "Blastoise"};
+        // String[] pokemon = {"Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wortortle", "Blastoise"};
 
 
-        boolean exists = false;
-        String target = "Mew";
+        // boolean exists = false;
+        // String target = "Mew";
 
-        for(String mon : pokemon){
-            if(mon.equals(target)){
-                exists = true;
-                break;
-            }
-        }
+        // for(String mon : pokemon){
+        //     if(mon.equals(target)){
+        //         exists = true;
+        //         break;
+        //     }
+        // }
 
-        if(exists){
-            System.out.println("You've caught a " + target);
-        }else{
-            System.out.println(target + " not found!");
-        }
+        // if(exists){
+        //     System.out.println("You've caught a " + target);
+        // }else{
+        //     System.out.println(target + " not found!");
+        // }
 
         // boolean[] bools = new boolean[3];
         // System.out.println(bools[0]);
