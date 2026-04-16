@@ -7,6 +7,9 @@ public class Main {
 
         int[] testArray = {1,4,4,2,5,-3,6,2};
         int[] orderedArray = {1, 10, 16, 25, 29, 33, 34, 62, 100, 120, 121};
+        double[] unordered = {2.3, 5.1, 0.2, 5.0, 9.7, 8.0, 12.2, 4.1};
+        selectionSort(unordered);
+        printArray(unordered);
         //int j = linearSearch(testArray, -3);
         int k = binarySearch(orderedArray, 120);
         int j = linearSearch(orderedArray, 120);
@@ -173,6 +176,13 @@ public class Main {
         System.out.println();
     }
 
+        public static void printArray(double[] array){
+        for(int i = 0; i < array.length; i++){
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+
     public static void setArrayZero(int[] array){
         for(int i = 0; i < array.length; i++){
             array[i] = 0;
@@ -242,6 +252,25 @@ public class Main {
             System.out.println("Number of steps " + steps);
             return -1;
     
+        }
+
+        public static void selectionSort(double[] list){
+            for(int i = 0; i < list.length-1; i++){
+                double currentMin = list[i];
+                int currentMinIndex = i;
+
+                for(int j = i + 1; j < list.length; j++){
+                    if(currentMin > list[j]){
+                        currentMin = list[j];
+                        currentMinIndex = j;
+                    }
+                }
+
+                if(currentMinIndex != i){
+                    list[currentMinIndex] = list[i];
+                    list[i] = currentMin;    
+                }
+            }
         }
 
 }
