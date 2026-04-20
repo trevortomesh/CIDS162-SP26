@@ -5,16 +5,53 @@ public class Main {
     public static void main(String[] args){
 
 
-        int[] testArray = {1,4,4,2,5,-3,6,2};
-        int[] orderedArray = {1, 10, 16, 25, 29, 33, 34, 62, 100, 120, 121};
-        double[] unordered = {2.3, 5.1, 0.2, 5.0, 9.7, 8.0, 12.2, 4.1};
-        selectionSort(unordered);
-        printArray(unordered);
-        //int j = linearSearch(testArray, -3);
-        int k = binarySearch(orderedArray, 120);
-        int j = linearSearch(orderedArray, 120);
-        System.out.println(k);
-        System.out.println(j);
+
+        int[][] matrix = randomMatrix(5,5);
+        printMatrix(matrix);
+        System.out.println(sumMatrix(matrix));
+
+        // int[][] triangleArray ={
+        //     {1,2,3,4,5},
+        //     {2,3,4,5},
+        //     {3,4,5},{},
+        //     {4,5},
+        //     {5}
+        // };
+
+        // triangleArray[2][1] = 0;
+
+        // System.out.println(triangleArray[3][0]);
+
+
+        // String[] lotr = {"UT","SMRN","Hobbit","FOTR", "TTT", "ROK"};
+        // String[] hp = {"SS", "TCS", "PoA", "GoF", "OOP", "HBP", "DH"};
+        // String[] mc = {"JP", "TLW", "CONGO", "PREY", "MICRO"};
+
+        // String[][] books = {lotr, hp, mc};
+
+        // System.out.println(books[1]);
+        // System.out.println(books[1][6]);
+       // int[][] matrix = new int[5][5];
+
+        // matrix[2][1] = 7;
+        // System.out.println(matrix[2][1]);
+        
+
+
+        //System.out.println(books[1][2]);
+        //System.out.println(books);
+        //System.out.println(mc[3]);
+
+        // int[] testArray = {1,4,4,2,5,-3,6,2};
+        // int[] orderedArray = {1, 10, 16, 25, 29, 33, 34, 62, 100, 120, 121};
+        // double[] unordered = {2.3, 5.1, 0.2, 5.0, 9.7, 8.0, 12.2, 4.1};
+        // selectionSort(unordered);
+        // printArray(unordered);
+        // //int j = linearSearch(testArray, -3);
+        // int k = binarySearch(orderedArray, 120);
+        // int j = linearSearch(orderedArray, 120);
+        // System.out.println(k);
+        // System.out.println(j);
 
 
 
@@ -272,6 +309,37 @@ public class Main {
                 }
             }
         }
+
+        public static int[][] randomMatrix(int r, int c){
+        int[][] matrix = new int[r][c];
+
+        for(int row = 0; row < matrix.length; row++){
+            for(int column = 0; column < matrix[row].length; column++){
+                    matrix[row][column] = (int)(Math.random()*100);
+            }
+        }
+        return matrix;
+        }
+
+        
+        public static void printMatrix(int matrix[][]){
+        for(int row = 0; row < matrix.length; row++){
+            for(int column = 0; column < matrix[row].length; column++){
+                System.out.print(matrix[row][column] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static int sumMatrix(int matrix[][]){
+        int total = 0;
+        for(int row = 0; row < matrix.length; row++){
+            for(int column = 0; column < matrix[row].length; column++){
+                total+= matrix[row][column];
+            }
+        }
+        return total;
+    }
 
 }
 
