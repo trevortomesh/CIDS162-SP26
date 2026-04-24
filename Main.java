@@ -4,37 +4,40 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter the number of points: ");
-        int numberOfPoints = input.nextInt();
+        testMaxArrayDimensions();
+        return;
 
-         double[][] points = new double[numberOfPoints][2];
-        System.out.print("Enter " + numberOfPoints + " points: ");
-        for(int i = 0; i < points.length; i++){
-            points[i][0] = input.nextDouble();
-            points[i][1] = input.nextDouble();
-        }
+        // Scanner input = new Scanner(System.in);
+        // System.out.println("Enter the number of points: ");
+        // int numberOfPoints = input.nextInt();
 
-        int p1 = 0, p2 = 1;
-        double shortestDistance = distance(points[p1][0], points[p1][1],
-                                           points[p2][0], points[p2][1]);
+        //  double[][] points = new double[numberOfPoints][2];
+        // System.out.print("Enter " + numberOfPoints + " points: ");
+        // for(int i = 0; i < points.length; i++){
+        //     points[i][0] = input.nextDouble();
+        //     points[i][1] = input.nextDouble();
+        // }
 
-        for(int i = 0; i < points.length; i++){
-            for(int j = i+1; j < points.length; j++){
-                double distance = distance(points[i][0], points[i][1],
-                                           points[j][0], points[j][1]);
+        // int p1 = 0, p2 = 1;
+        // double shortestDistance = distance(points[p1][0], points[p1][1],
+        //                                    points[p2][0], points[p2][1]);
 
-                if(shortestDistance > distance){
-                    p1 = i;  //new point 1
-                    p2 = j;  //new point 2
-                    shortestDistance = distance;
-                }
-            }
-        }
+        // for(int i = 0; i < points.length; i++){
+        //     for(int j = i+1; j < points.length; j++){
+        //         double distance = distance(points[i][0], points[i][1],
+        //                                    points[j][0], points[j][1]);
 
-        System.out.println("The closest two points are " +
-            "("+points[p1][0] + ", " + points[p1][1] + ") and (" +
-            points[p2][0] + ", " + points[p2][1]+")"); 
+        //         if(shortestDistance > distance){
+        //             p1 = i;  //new point 1
+        //             p2 = j;  //new point 2
+        //             shortestDistance = distance;
+        //         }
+        //     }
+        // }
+
+        // System.out.println("The closest two points are " +
+        //     "("+points[p1][0] + ", " + points[p1][1] + ") and (" +
+        //     points[p2][0] + ", " + points[p2][1]+")"); 
 
         // shortestDistance = distance(25, 3,
         //                             1, 2);
@@ -63,7 +66,29 @@ public class Main {
 
         // String[][] books = {lotr, hp, mc};
 
-        // System.out.println(books[1]);
+        // String[] nswitch = {"Loz:Botw", "LoZ: ToK", "Pokemon Sword", "Pokemon Shield"};
+        // String[] steam = {"DOOM", "Myst", "Balatro", "Slay The Spire"};
+        // String[][] games = {nswitch, steam};
+
+        // String[][][] collections = {books, games};
+
+        // System.out.println(collections[1][0][2]);
+
+        // double[][][] scores = {
+        //     {{7.5, 20.5}, {9.0, 22.5}, {19, 33.5}, {13, 21.5},{15, 2.5}},
+        //     {{6.5, 20.5}, {9.0, 22.5}, {15, 33.5}, {13, 21.5},{15, 2.5}},
+        //     {{7.9, 20.5}, {9.3, 22.5}, {16, 33.5}, {13, 21.5},{15, 2.5}},
+        //     {{7.5, 20.5}, {9.0, 22.5}, {15,8, 33.5}, {13, 21.5},{13, 2.5}},
+        //     {{7.5, 21.5}, {9.0, 22.5}, {15, 33.5}, {13, 21.5},{15, 2.5}}
+        // };
+
+        // scores[0][3][1] = 30;
+        // System.out.println(scores[0][3][1]);
+    
+    //    int[][][][][][][][][][][][][][][][] stupid = new int[10][10][10][10][10][10][10][10][10][10][10][10][10][10][10][10];
+
+        
+    // System.out.println(books[1]);
         // System.out.println(books[1][6]);
        // int[][] matrix = new int[5][5];
 
@@ -377,6 +402,39 @@ public class Main {
 
     public static double distance(double x1, double y1, double x2, double y2){
         return Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+    }
+
+    public static void testMaxArrayDimensions(){
+        int low = 1;
+        int high = 512;
+        int maxWorking = 0;
+
+        while(low <= high){
+            int mid = low + (high - low) / 2;
+            if(canCreateArrayWithDimensions(mid)){
+                maxWorking = mid;
+                low = mid + 1;
+            }else{
+                high = mid - 1;
+            }
+        }
+
+        System.out.println("Max working array dimensions: " + maxWorking);
+        System.out.println("First failing dimensions: " + (maxWorking + 1));
+    }
+
+    public static boolean canCreateArrayWithDimensions(int dimensions){
+        try{
+            int[] sizes = new int[dimensions];
+            for(int i = 0; i < sizes.length; i++){
+                sizes[i] = 1;
+            }
+
+            Object array = java.lang.reflect.Array.newInstance(int.class, sizes);
+            return array != null;
+        }catch(Throwable t){
+            return false;
+        }
     }
 
 }
