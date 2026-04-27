@@ -1,11 +1,49 @@
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
 
-        testMaxArrayDimensions();
-        return;
+        Scanner input = new Scanner(System.in);
+        boolean continueInput = true;
+
+        do{
+            try{
+                System.out.print("Enter an integer: ");
+                int number = input.nextInt();
+                System.out.println("The number entered is " + number);
+
+                continueInput = false;
+            }catch(InputMismatchException ex){
+                System.out.println("Try again. (" +
+                    "Incorrect input: an integer is required)");
+                }
+                input.nextLine();
+            
+        }while(continueInput);
+
+    //     boolean tryAgain = true;
+    //     while(tryAgain){
+    //         tryAgain = false;
+    //         System.out.print("Enter two integers: ");
+    //         int number1 = input.nextInt();
+    //         int number2 = input.nextInt();
+    //         try{
+    //             int result = quotient(number1, number2);
+    //             System.out.println(number1 + " / " + number2 + " is " + result);
+    //         }
+    //         catch(ArithmeticException ex){
+    //             // System.out.println("Exception: an integer " + 
+    //             // "cannot be divided by zero ");
+    //             System.out.println(ex.getMessage());
+    //             tryAgain = true;
+    //     }
+    // }
+    //     System.out.println("Execution continues...");
+
+        // testMaxArrayDimensions();
+        // return;
 
         // Scanner input = new Scanner(System.in);
         // System.out.println("Enter the number of points: ");
@@ -435,6 +473,13 @@ public class Main {
         }catch(Throwable t){
             return false;
         }
+    }
+
+    public static int quotient(int number1, int number2){
+        if(number2 == 0){
+            throw new ArithmeticException("Divisor cannot be zero");
+        }
+        return number1/number2;
     }
 
 }
