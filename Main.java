@@ -1,27 +1,88 @@
+import java.io.IOError;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws Exception{
 
-        Scanner input = new Scanner(System.in);
-        boolean continueInput = true;
+        java.io.File file = new java.io.File("scores.txt");
+        Scanner input = new Scanner(file);
 
-        do{
-            try{
-                System.out.print("Enter an integer: ");
-                int number = input.nextInt();
-                System.out.println("The number entered is " + number);
+        while(input.hasNext()){
+            String firstName = input.next();
+            String mi = input.next();
+            String lastName = input.next();
+            int score = input.nextInt();
 
-                continueInput = false;
-            }catch(InputMismatchException ex){
-                System.out.println("Try again. (" +
-                    "Incorrect input: an integer is required)");
-                }
-                input.nextLine();
+            System.out.println(firstName + " " + mi + " " + lastName + " " + score);
+        }
+
+        input.close();
+
+        // Scanner input = new Scanner(System.in);
+
+        // java.io.File file = new java.io.File("scores.txt");
+        // if(file.exists()){
+        //     System.out.println("File already exists!");
+        //     System.exit(0);
+        // }
+
+        // int numInts = 50;
+        // try(
+        // java.io.PrintWriter output = new java.io.PrintWriter(file);){
+        //    for(int i = 0; i < numInts; i++){
+        //     output.println((int)(Math.random()*100));
+        //    }
+        // }
+
+
+        // Scanner input = new Scanner(System.in);
+        // boolean continueInput = true;
+
+        // System.out.print("Enter an integer (not zero!): ");
+        // try{
+        //     int x = input.nextInt();
+        //     System.out.println(quotient(100, x));
+        // }catch(IllegalArgumentException ex){
+        //     System.out.println("Oop! Follow directions!");
+        // // }catch(InputMismatchException ex){
+        // //     System.out.println("Oop! Wrong type!");
+        // }catch(ArithmeticException ex){
+        //     System.out.println("Divide by zero oops... universe gone!");
+        // }finally{
+        //     System.out.println("all done!");
+        // }
+
+        // System.out.println("Keep going...");
+
+        // do{
+        //     try{
+        //         System.out.print("Enter an integer: ");
+        //         int number = input.nextInt();
+        //         System.out.println("The number entered is " + number);
+
+        //         continueInput = false;
+        //     }catch(InputMismatchException ex){
+        //         System.out.println("Try again. (" +
+        //             "Incorrect input: an integer is required)");
+        //         }
+        //         input.nextLine();
             
-        }while(continueInput);
+        // }while(continueInput);
+
+        // System.out.print("Enter two integers: ");
+        // int number1 = input.nextInt();
+        // int number2 = input.nextInt();
+
+        // int result = 12;
+        // try{
+        // result = quotient(number1, number2);
+        // }catch(ArithmeticException ex){
+        //     System.out.println("Error: divide by zero!");
+        // }
+        // System.out.println(result);
 
     //     boolean tryAgain = true;
     //     while(tryAgain){
@@ -482,5 +543,12 @@ public class Main {
         return number1/number2;
     }
 
+
+    public static void myMethod(int x) throws IllegalArgumentException{
+        IllegalArgumentException ex = new IllegalArgumentException("Wrong Argument");
+        throw ex;
+    }
 }
+
+
 
