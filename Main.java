@@ -4,22 +4,67 @@ import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
 public class Main {
     public static void main(String[] args) throws Exception{
 
-        java.io.File file = new java.io.File("scores.txt");
-        Scanner input = new Scanner(file);
+        JFrame frame = new JFrame("Greeter GUI");
 
-        while(input.hasNext()){
-            String firstName = input.next();
-            String mi = input.next();
-            String lastName = input.next();
-            int score = input.nextInt();
+        JLabel nameLabel = new JLabel("Enter your name:");
+        JTextField nameField = new JTextField(15);
+        // JLabel label = new JLabel("Nothing has happened yet!");
+        JButton button = new JButton("Say Hello!");
 
-            System.out.println(firstName + " " + mi + " " + lastName + " " + score);
-        }
+        JLabel resultLabel = new JLabel("Greeting will appear here");
 
-        input.close();
+
+        button.addActionListener(e -> {
+            String name = nameField.getText();
+            //label.setText("Ooh! You clicked my button!");
+            resultLabel.setText("Hello, " + name+"!");
+            System.out.println("Button was clicked!");
+        });
+
+        JPanel panel = new JPanel();
+        panel.add(nameLabel);
+        panel.add(nameField);
+        panel.add(resultLabel);
+        panel.add(button);
+
+        frame.add(panel);
+
+        frame.setSize(400,300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+
+
+        //System.out.println("Hello world!");
+        // java.io.File file = new java.io.File("test.txt");
+        // Scanner input = new Scanner(System.in);
+        // System.out.println("Enter an integer!");
+        // int intValue = input.nextInt();
+        // input.nextLine();
+        // System.out.println("Enter a string!");
+        // String line = input.nextLine();
+
+        // System.out.println(intValue);
+        // System.out.println(line);
+
+        // while(input.hasNext()){
+        //     String firstName = input.next();
+        //     String mi = input.next();
+        //     String lastName = input.next();
+        //     int score = input.nextInt();
+
+        //     System.out.println(firstName + " " + mi + " " + lastName + " " + score);
+        // }
+
+        // input.close();
 
         // Scanner input = new Scanner(System.in);
 
